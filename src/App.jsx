@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Feedback from "./Pages/Feedback";
 import SiteMap from "./Pages/SiteMap";
-import LivingRoom from "./Pages/livingRoom";
+import LivingRoom from "./Pages/LivingRoom";
 import Kitchen from "./Pages/Kitchen";
 import Bedroom from "./Pages/Bedroom";
 import Bathroom from "./Pages/Bathroom";

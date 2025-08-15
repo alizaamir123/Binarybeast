@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Modern Elegance",
+    "description": "A sophisticated design blending comfort with style.",
+    "products": ["Contemporary Sofa", "Glass Coffee Table", "Metallic Accent Chair"],
+    "image": "/assets/images/cotemporary1.jpg"
+  },
+  {
+    "title": "Vibrant Colors",
+    "description": "Brighten your space with energetic hues and bold designs.",
+    "products": ["Colorful Area Rug", "Statement Wall Art", "Brightly Colored Cushions"],
+    "image": "/assets/images/cotemporary2.jpg"
+  },
+  {
+    "title": "Sleek Lines",
+    "description": "Embrace minimalism with clean, straight lines for a modern look.",
+    "products": ["Minimalist Dining Table", "Streamlined Dining Chairs", "Subtle Decorative Accents"],
+    "image": "/assets/images/cotemporary3.jpg"
+  }
+]

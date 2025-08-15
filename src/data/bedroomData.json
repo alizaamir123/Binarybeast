@@ -1,0 +1,44 @@
+[
+  {
+    "img": "/assets/images/bedroom1.jpg",
+    "title": "Modern Elegance",
+    "description": "A sleek design that combines luxury with comfort.",
+    "products": ["Luxury Bed Frame", "Soft Mattress", "Stylish Nightstands"],
+    "style": "Modern"
+  },
+  {
+    "img": "/assets/images/bedroom2.jpg",
+    "title": "Rustic Charm",
+    "description": "Embrace a warm, cozy atmosphere with rustic decor.",
+    "products": ["Wooden Bed Frame", "Plush Throw Blanket", "Vintage Table Lamps"],
+    "style": "Rustic"
+  },
+  {
+    "img": "/assets/images/bedroom3.jpg",
+    "title": "Timeless Comfort",
+    "description": "A design that never goes out of style, perfect for relaxation.",
+    "products": ["Classic Bed Frame", "Down Comforter", "Elegant Bedside Rugs"],
+    "style": "Timeless"
+  },
+  {
+    "img": "/assets/images/bedroom4.jpg",
+    "title": "Contemporary Style",
+    "description": "Clean lines and modern furnishings create a stylish retreat.",
+    "products": ["Sleek Bed Frame", "Minimalist Nightstands", "Geometric Wall Art"],
+    "style": "Contemporary"
+  },
+  {
+    "img": "/assets/images/bedroom5.jpg",
+    "title": "Vintage Aesthetic",
+    "description": "Add a touch of nostalgia with vintage decor elements.",
+    "products": ["Antique Bed Frame", "Floral Bedspread", "Retro Wall Mirrors"],
+    "style": "Vintage"
+  },
+  {
+    "img": "/assets/images/bedroom6.jpg",
+    "title": "Minimalist Design",
+    "description": "Focus on simplicity and functionality for a clean look.",
+    "products": ["Simple Bed Frame", "Neutral Bedding", "Functional Storage Solutions"],
+    "style": "Minimalist"
+  }
+]

@@ -48,9 +48,23 @@ const LivingRoom = () => {
 
   return (
     <div className="font-poppins bg-white text-gray-900">
+
+ {/* Hero Banner */}
+ <div className="relative h-[500px] flex items-center justify-center text-center">
+        <img
+          src="/assets/images/aboutfront.png"
+          alt="Sofas Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <h1 className="relative text-white text-4xl md:text-5xl font-bold drop-shadow-lg">
+        Discover Your Living Room Style
+        </h1>
+      </div>
+
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto mt-28 px-4 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">Discover Your Living Room Style</h1>
+        
         <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
           From rustic warmth to modern sleekness, explore designs that make your living room truly yours.
         </p>
@@ -64,6 +78,8 @@ const LivingRoom = () => {
           />
         </div>
       </section>
+
+      
 
       {/* Collection */}
       <section className="max-w-7xl mx-auto px-4 mt-16">

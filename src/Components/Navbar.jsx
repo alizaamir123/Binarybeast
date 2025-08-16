@@ -3,18 +3,25 @@ import { FaHeart, FaChevronDown, FaChevronUp, FaUser } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 
 const PremiumNavbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openSubDropdown, setOpenSubDropdown] = useState(null);
   const [activeNav, setActiveNav] = useState('Home');
+  const [wishlist, setWishlist] = useState([]);
 
+  // Handle scroll navbar shadow
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Load wishlist from localStorage
+  useEffect(() => {
+    const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    setWishlist(savedWishlist);
   }, []);
 
   const toggleDropdown = (name) => {
@@ -118,7 +125,6 @@ const PremiumNavbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between">
-          
           {/* Logo */}
           <Link
             to="/"
@@ -255,13 +261,24 @@ const PremiumNavbar = () => {
 
           {/* Wishlist & Profile Icons */}
           <div className="hidden lg:flex items-center space-x-4">
-          
+            {/* Wishlist Button */}
+            <Link
+              to=""
+              className="relative w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white shadow-lg border border-red-300"
+            >
+              <FaHeart size={18} />
+              {wishlist.length > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 bg-white text-red-600 text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full shadow">
+                  {wishlist.length}
+                </span>
+              )}
+            </Link>
 
+            {/* Profile Icon */}
             <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-amber-700 text-white shadow-lg border border-amber-300">
               <FaUser size={18} />
             </div>
           </div>
-
         </div>
       </div>
     </header>

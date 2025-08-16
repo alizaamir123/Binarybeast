@@ -48,9 +48,23 @@ export default function Home() {
 
   return (
     <div className="font-poppins bg-white text-gray-900">
+
+       {/* Hero Banner */}
+       <div className="relative h-[500px] flex items-center justify-center text-center">
+        <img
+          src="/assets/images/kitchen3.jpg"
+          alt="Sofas Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <h1 className="relative text-white text-4xl md:text-5xl font-bold drop-shadow-lg">
+        Discover Your Kitchen Style
+        </h1>
+      </div>
+      ````
       {/* Main Content */}
       <main className="container mx-auto pt-24 px-4">
-        <h1 className="text-center text-3xl font-bold">Discover Your Kitchen Style</h1>
+      
         <p className="text-center max-w-2xl mx-auto mt-2">
           Dive into our collection of stunning kitchen designs. Whether you're looking for rustic charm or modern elegance, explore our diverse styles to find the perfect inspiration for your space.
         </p>

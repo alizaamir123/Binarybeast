@@ -29,9 +29,22 @@ const ElegantCollection = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 font-poppins">
+    <div className="font-poppins bg-white text-gray-900">
+
+      {/* Hero Banner */}
+ <div className="relative h-[500px] flex items-center justify-center text-center">
+        <img
+          src="/assets/images/kitchen5.jpg"
+          alt="Sofas Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <h1 className="relative text-white text-4xl md:text-5xl font-bold drop-shadow-lg">
+        Discover Your Elegant Style
+        </h1>
+      </div>
       {/* Intro */}
-      <h1 className="text-center text-3xl font-bold mb-4">Discover Your Elegant Style</h1>
+
       <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
         Dive into our collection of stunning elegant designs. Whether you're looking for classic beauty or modern sophistication, explore our diverse styles to find the perfect inspiration for your space.
       </p>

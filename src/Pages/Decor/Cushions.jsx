@@ -11,8 +11,19 @@ export default function Sofas() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
   const [priceFilter, setPriceFilter] = useState("all");
+  const [wishlist, setWishlist] = useState([]);
 
   const parsePrice = (p) => Number(p.replace(/\$/g, "").replace(/,/g, ""));
+
+  const toggleWishlist = (item) => {
+    if (wishlist.find((wish) => wish.name === item.name)) {
+      setWishlist(wishlist.filter((wish) => wish.name !== item.name));
+    } else {
+      setWishlist([...wishlist, item]);
+    }
+  };
+
+  const isInWishlist = (name) => wishlist.some((item) => item.name === name);
 
   const filteredSofas = sofas
     .filter((s) => s.name.toLowerCase().includes(search.toLowerCase()))
@@ -96,17 +107,54 @@ export default function Sofas() {
             {filteredSofas.map((sofa, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                className="relative bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
               >
+                {/* Wishlist heart */}
+                <button
+                  onClick={() => toggleWishlist(sofa)}
+                  className="absolute top-3 right-3 z-10 text-2xl focus:outline-none"
+                  aria-label="Toggle wishlist"
+                >
+                  {isInWishlist(sofa.name) ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="red"
+                      viewBox="0 0 24 24"
+                      stroke="red"
+                      className="w-8 h-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1}
+                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="gray"
+                      className="w-8 h-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                      />
+                    </svg>
+                  )}
+                </button>
+
                 <img
                   src={sofa.img}
                   alt={sofa.name}
                   className="w-full h-70 object-cover hover:scale-105 transition-transform duration-300"
                 />
                 <div className="p-5 text-center">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {sofa.name}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-gray-900">{sofa.name}</h3>
                   <p className="text-gray-600 mt-2">{sofa.price}</p>
                   <button className="mt-4 px-5 py-2 bg-[#0f172a] text-white rounded-lg hover:bg-[#1e293b]">
                     Cushions and Throws

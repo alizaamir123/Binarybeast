@@ -54,12 +54,23 @@ const BathroomCollection = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="font-poppins bg-white text-gray-900">
+
+       {/* Hero Banner */}
+       <div className="relative h-[500px] flex items-center justify-center text-center">
+        <img
+          src="/assets/images/bathroom sinksbanner.jpg"
+          alt="Sofas Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <h1 className="relative text-white text-4xl md:text-5xl font-bold drop-shadow-lg">
+        Discover Your Bathroom Style
+        </h1>
+      </div>
    
       {/* Heading */}
-      <h2 className="text-center text-3xl font-bold text-gray-800 mt-10">
-        Discover Your Bathroom Style
-      </h2>
+      
       <p className="text-center text-gray-600 mt-2 max-w-2xl mx-auto">
         Explore our beautifully crafted bathroom designs, perfect for adding a touch of elegance and functionality to your space. From modern to rustic styles, our collection offers a wide range of options to suit every taste.
       </p>

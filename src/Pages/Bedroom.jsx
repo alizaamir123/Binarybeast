@@ -12,11 +12,25 @@ const BedroomCollection = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
-      {/* Heading */}
-      <h1 className="text-center text-3xl font-bold text-gray-800">
+    <div className="font-poppins bg-white text-gray-900">
+
+
+ {/* Hero Banner */}
+ <div className="relative h-[500px] flex items-center justify-center text-center">
+        <img
+          src="/assets/images/Luxurybedbanner.jpg"
+          alt="Sofas Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <h1 className="relative text-white text-4xl md:text-5xl font-bold drop-shadow-lg">
         Discover Your Bedroom Style
-      </h1>
+        </h1>
+      </div>
+
+
+      {/* Heading */}
+     
       <p className="text-center text-gray-600 mt-2 max-w-2xl mx-auto">
         Dive into our collection of stunning bedroom designs. Whether you're looking
         for modern elegance, rustic charm, or timeless comfort, explore our diverse

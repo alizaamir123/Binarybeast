@@ -70,7 +70,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/90 via-[#0f172a]/70 to-transparent z-10"></div>
         <div className="absolute inset-0">
           <img 
-            src="../public/assets/images/homebanner.png" 
+            src="/assets/images/homebanner.png" 
             alt="Luxury Interior" 
             className="w-full h-full object-cover"
           />
